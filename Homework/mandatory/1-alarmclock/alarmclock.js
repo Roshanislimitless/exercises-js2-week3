@@ -1,4 +1,24 @@
-function setAlarm() {}
+
+function setAlarm() {
+  var Initial = document.querySelector('#alarmSet').value;
+  setInterval(function Alarm() {
+    if (Initial > 0) {
+      Initial--
+    } else if (Initial === 0) {
+      playAlarm();
+       document.body.style.background = "red";
+    }
+
+
+    document.querySelector('#timeRemaining').innerHTML = "Time Remaining: 00:" + Initial;
+
+
+
+  }, 1000)
+}
+
+
+
 
 // DO NOT EDIT BELOW HERE
 
